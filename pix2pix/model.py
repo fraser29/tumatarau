@@ -270,7 +270,7 @@ def validate_model(model, val_loader, device, save_visualizations=True, save_dir
             total_ssim_loss += ssim_l.item()
             
             # Save visualizations for first few batches
-            if save_visualizations and save_dir and batch_idx < 30:
+            if save_visualizations and save_dir and batch_idx < 4:
                 for i in range(min(4, pred.shape[0])):  # Save up to 4 samples per batch
                     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
                     
